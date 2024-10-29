@@ -248,6 +248,8 @@ body {
         text-decoration: none;
         color: aliceblue;
         margin-bottom: 30px;
+        margin-left: 5px;
+        margin-right: 5px;
         &:hover img {
           filter: grayscale(105%);
           animation: sect2Imgs1 0.5s;
@@ -1166,7 +1168,7 @@ footer {
   }
 }
 
-@media only screen and (max-width: 910px) {
+@media only screen and (max-width: 930px) {
   .sect2 {
     .main {
       .imgs {
