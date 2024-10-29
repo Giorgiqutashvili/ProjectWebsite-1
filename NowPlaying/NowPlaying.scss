@@ -1,0 +1,908 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  height: fit-content;
+  overflow-x: hidden;
+}
+
+@mixin flexbox($Value1, $Value2, $Value3) {
+  display: flex;
+  justify-content: $Value1;
+  align-items: $Value2;
+  flex-direction: $Value3;
+}
+
+.sect1 {
+  width: 100%;
+  background-color: #252989;
+  min-height: 610px;
+  margin: 0;
+  .main {
+    max-width: 1750.75px;
+    width: 92%;
+    margin: 0 auto;
+    @include flexbox(start, start, column);
+    margin: 0 auto;
+    .content {
+      padding-top: 130px;
+      max-width: 100%;
+      margin: 0 auto;
+      .hh1 {
+        color: aliceblue;
+        font-size: 650%;
+        font-family: "Bree Serif", serif;
+        font-weight: 900;
+        font-style: normal;
+        margin: 0;
+        max-width: 850px;
+      }
+    }
+    header {
+      width: 100%;
+      max-height: 290px;
+      position: relative;
+      .dropdown {
+        position: absolute;
+        right: 0;
+        top: 22%;
+        display: none;
+        ul {
+          background-color: rgb(230, 78, 197);
+          color: aliceblue;
+        }
+        a {
+          background-color: rgb(230, 78, 197);
+          color: aliceblue;
+          i {
+            font-size: 150%;
+          }
+        }
+      }
+      .header {
+        @include flexbox(space-between, start, row);
+        max-width: 100%;
+        height: 90px;
+        background-color: transparent;
+        .social {
+          @include flexbox(start, start, row);
+          margin: 0;
+          gap: 10px;
+          padding-top: 30px;
+          a {
+            @include flexbox(start, start, row);
+            text-decoration: none;
+            i {
+              font-size: 130%;
+              color: aliceblue;
+              user-select: none;
+              cursor: pointer;
+            }
+          }
+        }
+        .login {
+          margin: 0;
+          padding-top: 25px;
+          gap: 10px;
+          width: fit-content;
+          @include flexbox(start, start, row);
+          h2 {
+            font-size: 110%;
+            color: aliceblue;
+            font-weight: 300;
+            user-select: none;
+            cursor: pointer;
+            &:hover {
+              color: rgb(184, 184, 184);
+            }
+          }
+          i {
+            font-size: 150%;
+            color: #ff66f5;
+            user-select: none;
+            cursor: pointer;
+          }
+        }
+      }
+
+      nav {
+        @include flexbox(space-between, end, row);
+        max-width: 100%;
+        background-color: transparent;
+        height: 110px;
+        margin: 0 auto;
+        border-bottom: 1.5px solid rgb(255, 255, 255);
+        padding-bottom: 20px;
+        a {
+          text-decoration: none;
+          .hh1 {
+            font-family: "Great Vibes", cursive;
+            font-weight: 600;
+            font-style: normal;
+            font-size: 200%;
+            color: #ff66f5;
+            cursor: pointer;
+            user-select: none;
+          }
+        }
+        ul {
+          @include flexbox(space-between, center, row);
+          gap: 35px;
+          i {
+            display: none;
+          }
+          a {
+            text-decoration: none;
+            cursor: pointer;
+            user-select: none;
+          }
+          li {
+            list-style: none;
+            font-size: 105%;
+            color: aliceblue;
+            animation: nav1-2 0.35s;
+            &:hover {
+              color: rgb(225, 118, 232);
+              animation: nav1-1 0.35s;
+            }
+          }
+        }
+      }
+    }
+  }
+}
+
+@keyframes main2btn {
+  from {
+    background-color: #ff66f5;
+  }
+  to {
+    background-color: aliceblue;
+  }
+}
+
+@keyframes main2btn2 {
+  to {
+    background-color: #ff66f5;
+  }
+  from {
+    background-color: aliceblue;
+  }
+}
+
+.sect2 {
+  background-color: #0e0a48;
+  width: 100%;
+  min-height: 1250px;
+  padding-top: 120px;
+  padding-bottom: 120px;
+  .main {
+    max-width: 1750.75px;
+    width: 92%;
+    margin: 0 auto;
+    border: #ff66f5 1px solid;
+    min-height: 500px;
+    display: grid;
+    grid-template-columns: repeat(2, 0.5fr);
+    .times {
+      @include flexbox(center, start, column);
+      padding-inline: 70px;
+      > h1 {
+        color: #ff66f5;
+        font-size: 350%;
+        margin-bottom: 40px;
+        font-family: "Bree Serif", serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+      > div {
+        width: 100%;
+        min-height: 165px;
+        border: #ff66f5 1px solid;
+        @include flexbox(center, center, row);
+        h1 {
+          font-size: 530%;
+          color: aliceblue;
+          font-family: "Bree Serif", serif;
+          font-weight: 900;
+          font-style: normal;
+          flex-basis: 0;
+          flex-grow: 1;
+          text-align: center;
+          height: 100%;
+          padding-top: 25px !important;
+        }
+        .pm7 {
+          border-left: #ff66f5 1.5px solid;
+        }
+      }
+    }
+    .prices {
+      border-left: #ff66f5 1px solid;
+      @include flexbox(center, start, column);
+      padding-inline: 70px;
+      > h1 {
+        color: #ff66f5;
+        font-size: 350%;
+        margin-bottom: 35px;
+        font-family: "Bree Serif", serif;
+        font-weight: 900;
+        font-style: normal;
+      }
+      > h2 {
+        color: aliceblue;
+        font-size: 270%;
+        margin-bottom: 10px;
+        font-weight: 500;
+        font-family: "Poppins", sans-serif;
+        font-weight: 500;
+        font-style: normal;
+      }
+    }
+  }
+  .main2 {
+    width: 92%;
+    max-width: 1750.75px;
+    margin: 0 auto;
+    min-height: 2700px;
+    margin-top: 170px;
+    border: #ff66f5 1.5px solid;
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(8, 1fr);
+    padding-inline: 50px;
+    > div {
+      border-bottom: #ff66f5 1.5px solid;
+      @include flexbox(space-between, center, row);
+      > button {
+        width: 180px;
+        max-width: 350px;
+        height: 60px;
+        background-color: #ff66f5;
+        color: #0e0a48;
+        font-family: sans-serif;
+        font-size: 120%;
+        font-weight: 500;
+        border: none;
+        cursor: pointer;
+        user-select: none;
+        animation: main2btn2 0.35s;
+        &:hover {
+          background-color: aliceblue;
+          animation: main2btn 0.35s;
+        }
+      }
+      > div {
+        @include flexbox(start, start, column);
+        gap: 12px;
+        h1 {
+          color: aliceblue;
+          font-size: 180%;
+          font-family: sans-serif;
+          font-weight: 500;
+        }
+        .hh2 {
+          color: aliceblue;
+          font-size: 270%;
+          font-family: "Poppins", sans-serif;
+          font-weight: 350;
+          font-style: normal;
+          padding-bottom: 20px;
+          cursor: pointer;
+          user-select: none;
+          &:hover {
+            color: #ff66f5;
+          }
+          &:active {
+            color: #bb1cb0;
+          }
+        }
+        .hh2-2 {
+          display: none;
+          font-size: 250%;
+          font-family: "Poppins", sans-serif;
+          font-weight: 350;
+          font-style: normal;
+          color: aliceblue;
+          cursor: pointer;
+          user-select: none;
+          &:hover {
+            color: #ff66f5;
+          }
+          &:active {
+            color: #bb1cb0;
+          }
+        }
+      }
+    }
+    .lastDiv {
+      border: none;
+    }
+  }
+}
+
+footer {
+  background-color: #3843cd;
+  min-height: 460px;
+  width: 100%;
+  .main {
+    width: 92%;
+    max-width: 1750.75px;
+    margin: 0 auto;
+    height: 350px;
+    padding-top: 60px;
+    border-bottom: 1px solid aliceblue;
+    margin-bottom: 20px;
+    @include flexbox(space-between, start, row);
+    .name {
+      @include flexbox(start, start, column);
+      width: 295px;
+      gap: 15px;
+      h1 {
+        color: aliceblue;
+        font-size: 200%;
+        font-family: "Great Vibes", cursive;
+        font-weight: 600;
+        font-style: normal;
+        margin: 0;
+        width: 280px;
+      }
+      p {
+        color: aliceblue;
+        font-family: "Poppins", sans-serif;
+        font-weight: 350;
+        font-style: normal;
+        width: 92%;
+      }
+    }
+    .mid {
+      @include flexbox(space-between, start, row);
+      max-width: 510px;
+      margin-inline: 35px;
+      gap: 105px;
+      .menu {
+        @include flexbox(start, start, column);
+        gap: 5px;
+        width: 150px;
+
+        h1 {
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color: aliceblue;
+          font-size: 145%;
+          margin: 0;
+          margin-bottom: 15px;
+          width: 140px;
+        }
+        a {
+          text-decoration: none;
+          color: aliceblue;
+          cursor: pointer;
+          user-select: none;
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+          font-style: normal;
+          font-size: 100%;
+        }
+      }
+      .contact {
+        @include flexbox(start, start, column);
+        h1 {
+          font-family: "Poppins", sans-serif;
+          font-weight: 400;
+          font-style: normal;
+          color: aliceblue;
+          font-size: 145%;
+          margin: 0;
+          margin-bottom: 20px;
+        }
+        h2 {
+          font-family: "Poppins", sans-serif;
+          font-weight: 300;
+          font-style: normal;
+          color: aliceblue;
+          font-size: 100%;
+          margin-bottom: 5px;
+        }
+      }
+    }
+    > a {
+      display: none;
+      button {
+        display: none;
+        width: 150px;
+        height: 55px;
+        background-color: transparent;
+        font-size: 110%;
+        color: aliceblue;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        border: 1px solid aliceblue;
+        animation: footerbtn1-2 0.35s;
+        cursor: pointer;
+        user-select: none;
+        &:hover {
+          background-color: aliceblue;
+          color: #3843cd;
+          animation: footerbtn1-1 0.35s;
+        }
+      }
+    }
+
+    .btn {
+      @include flexbox(space-between, start, column);
+      height: 170px !important;
+      padding: 0;
+      width: 150px;
+      cursor: default;
+      button {
+        width: 150px;
+        height: 55px;
+        background-color: transparent;
+        font-size: 110%;
+        color: aliceblue;
+        font-family: "Poppins", sans-serif;
+        font-weight: 300;
+        font-style: normal;
+        border: 1px solid aliceblue;
+        animation: footerbtn1-2 0.35s;
+        cursor: pointer;
+        user-select: none;
+        &:hover {
+          background-color: aliceblue;
+          color: #3843cd;
+          animation: footerbtn1-1 0.35s;
+        }
+      }
+      div {
+        @include flexbox(space-between, end, row);
+        gap: 10px;
+        width: 100%;
+        height: 45px;
+        a {
+          font-size: 130%;
+          color: aliceblue;
+          cursor: pointer;
+          user-select: none;
+          width: 30px;
+          height: 30px;
+          i {
+            width: 25px;
+            height: 25px;
+          }
+        }
+      }
+    }
+  }
+  h1 {
+    margin: 0 auto;
+    width: 92%;
+    margin: 0 auto;
+    max-width: 1750.75px;
+    color: aliceblue;
+    font-size: 100%;
+    font-family: sans-serif;
+    font-weight: 400;
+  }
+}
+
+@keyframes nav1-1 {
+  from {
+    color: aliceblue;
+  }
+  to {
+    color: rgb(225, 118, 232);
+  }
+}
+
+@keyframes nav1-2 {
+  to {
+    color: aliceblue;
+  }
+  from {
+    color: rgb(225, 118, 232);
+  }
+}
+
+@keyframes footerbtn1-1 {
+  from {
+    background-color: transparent;
+    color: aliceblue;
+  }
+  to {
+    background-color: aliceblue;
+    color: #3843cd;
+  }
+}
+
+@keyframes footerbtn1-2 {
+  to {
+    background-color: transparent;
+    color: aliceblue;
+  }
+  from {
+    background-color: aliceblue;
+    color: #3843cd;
+  }
+}
+
+@media only screen and (max-width: 1740px) {
+  .sect2 {
+    .main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 500px);
+      justify-content: center;
+      gap: 55px;
+      border: none;
+      width: 100%;
+      .times {
+        @include flexbox(center, center, column);
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
+        > h1 {
+          margin-bottom: 30px !important;
+        }
+        > div {
+          @include flexbox(start, center, column);
+          min-height: 350px !important;
+          h1 {
+            width: 100%;
+            padding-top: 30px !important;
+            margin-bottom: 0 !important;
+          }
+          .pm7 {
+            border-top: #ff66f5 1px solid;
+          }
+        }
+      }
+      .prices {
+        width: 100% !important;
+        border: none;
+        border-top: #ff66f5 1px solid;
+        @include flexbox(start, center, column);
+        padding: 0;
+        padding-top: 30px;
+        h2 {
+          font-size: 250%;
+        }
+      }
+    }
+    .main2 {
+      margin-top: 90px !important;
+      > div {
+        @include flexbox(space-around, start, column);
+        padding-top: 15px;
+        div {
+          .hh2 {
+            display: none;
+          }
+          .hh2-2 {
+            display: block !important;
+            line-height: 55px;
+          }
+        }
+        button {
+          width: 100% !important;
+          max-width: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 615px) {
+  .sect2 {
+    .main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 500px);
+      justify-content: center;
+      gap: 55px;
+      border: none;
+      .times {
+        @include flexbox(center, center, column);
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
+        > h1 {
+          margin-bottom: 30px !important;
+        }
+        > div {
+          @include flexbox(start, center, column);
+          min-height: 350px !important;
+          h1 {
+            width: 100%;
+            padding-top: 30px !important;
+            margin-bottom: 0 !important;
+          }
+          .pm7 {
+            border-top: #ff66f5 1px solid;
+          }
+        }
+      }
+      .prices {
+        width: 100% !important;
+        border: none;
+        border-top: #ff66f5 1px solid;
+        @include flexbox(start, center, column);
+        padding: 0;
+        padding-top: 30px;
+        h2 {
+          font-size: 180%;
+        }
+      }
+    }
+    .main2 {
+      margin-top: 90px !important;
+      > div {
+        @include flexbox(space-around, start, column);
+        padding-top: 15px;
+        div {
+          .hh2 {
+            display: none;
+          }
+          .hh2-2 {
+            display: block !important;
+            line-height: 55px;
+          }
+        }
+        button {
+          width: 100% !important;
+          max-width: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 450px) {
+  .sect2 {
+    .main {
+      display: grid;
+      grid-template-columns: 1fr;
+      grid-template-rows: repeat(2, 500px);
+      justify-content: center;
+      gap: 55px;
+      border: none;
+      .times {
+        @include flexbox(center, center, column);
+        padding: 0;
+        width: 90%;
+        margin: 0 auto;
+        > h1 {
+          margin-bottom: 30px !important;
+        }
+        > div {
+          @include flexbox(start, center, column);
+          min-height: 350px !important;
+          h1 {
+            width: 100%;
+            padding-top: 30px !important;
+            margin-bottom: 0 !important;
+          }
+          .pm7 {
+            border-top: #ff66f5 1px solid;
+          }
+        }
+      }
+      .prices {
+        width: 100% !important;
+        border: none;
+        border-top: #ff66f5 1px solid;
+        @include flexbox(start, center, column);
+        padding: 0;
+        padding-top: 30px;
+        h2 {
+          font-size: 130%;
+          line-height: 20px;
+        }
+      }
+    }
+    .main2 {
+      margin-top: 0 !important;
+      > div {
+        @include flexbox(space-around, start, column);
+        padding-top: 30px;
+        div {
+          .hh2 {
+            display: none;
+          }
+          > h1 {
+            font-size: 120%;
+          }
+          .hh2-2 {
+            display: block !important;
+            line-height: 35px;
+            font-size: 150%;
+          }
+        }
+        button {
+          width: 100% !important;
+          max-width: none !important;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 1070px) {
+  footer {
+    .main {
+      @include flexbox(space-between, center, column);
+      height: fit-content;
+      gap: 35px;
+      padding-top: 35px;
+      .name {
+        @include flexbox(start, center, column);
+        h1 {
+          text-align: center;
+        }
+        p {
+          text-align: center;
+        }
+      }
+      .mid {
+        @include flexbox(space-between, center, column);
+        gap: 35px;
+        .menu {
+          @include flexbox(start, center, column);
+          h1 {
+            margin-bottom: 10px;
+            text-align: center;
+          }
+        }
+        .contact {
+          @include flexbox(start, center, column);
+          h1 {
+            margin-bottom: 10px;
+            text-align: center;
+          }
+        }
+      }
+      a {
+        display: block;
+        text-decoration: none;
+        button {
+          display: block;
+        }
+      }
+      .btn {
+        height: 50px;
+        padding-bottom: 35px;
+        height: 70px !important;
+
+        div {
+          @include flexbox(space-evenly, start, row);
+        }
+
+        button {
+          display: none;
+        }
+      }
+    }
+    h1 {
+      text-align: center;
+    }
+  }
+}
+
+@media only screen and (max-width: 790px) {
+  .sect1 {
+    .main {
+      .content {
+        padding: 0 !important;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        .hh1 {
+          text-align: center;
+          padding-bottom: 50px;
+          padding-top: 50px;
+        }
+        .hh2 {
+          text-align: center;
+        }
+        p {
+          font-size: 100%;
+          text-align: center;
+          margin-bottom: 30px !important;
+        }
+        button {
+          margin-top: 20px;
+        }
+      }
+    }
+    header {
+      nav {
+        ul {
+          display: none !important;
+        }
+      }
+      .dropdown {
+        display: block !important;
+        ul {
+          background-color: rgb(230, 78, 197);
+          color: aliceblue;
+        }
+        a {
+          background-color: rgb(230, 78, 197);
+          color: aliceblue;
+          border: none !important;
+          i {
+            font-size: 150%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 480px) {
+  .sect1 {
+    .main {
+      header {
+        nav {
+          .hh1 {
+            font-size: 170%;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 900;
+          }
+        }
+      }
+      .content {
+        padding: 0 !important;
+        align-items: center;
+        display: flex;
+        flex-direction: column;
+        margin: 0 auto;
+        width: 100%;
+        .hh1 {
+          text-align: center;
+          padding-bottom: 50px;
+          padding-top: 55px;
+          font-size: 590%;
+        }
+        .hh2 {
+          text-align: center;
+          font-size: 450%;
+          width: 300px;
+          margin-top: 20px;
+        }
+        p {
+          font-size: 100%;
+          text-align: center;
+          margin-bottom: 30px !important;
+        }
+        button {
+          margin-top: 20px;
+        }
+      }
+    }
+  }
+}
+
+@media only screen and (max-width: 390px) {
+  .sect1 {
+    .main {
+      header {
+        nav {
+          .hh1 {
+            font-size: 140% !important;
+            font-family: Verdana, Geneva, Tahoma, sans-serif;
+            font-weight: 900;
+            font-size: 170%;
+          }
+        }
+      }
+    }
+  }
+}
