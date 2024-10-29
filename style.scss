@@ -29,7 +29,6 @@ body {
     width: 92%;
     margin: 0 auto;
     @include flexbox(start, start, column);
-    margin: 0 auto;
     .content {
       padding-top: 120px;
       max-width: 100%;

@@ -27,7 +27,6 @@ body {
   justify-content: start;
   align-items: start;
   flex-direction: column;
-  margin: 0 auto;
 }
 .sect1 .main .content {
   padding-top: 120px;
