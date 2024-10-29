@@ -1414,8 +1414,9 @@ footer h1 {
     font-size: 310%;
     margin-top: 5px;
     color: #0e0a48;
-    font-family: "Gill Sans", "Gill Sans MT", Calibri, "Trebuchet MS", sans-serif;
+    font-family: "Bree Serif", serif;
     font-weight: 600;
+    font-style: normal;
   }
 }
 @media only screen and (max-width: 1050px) {
